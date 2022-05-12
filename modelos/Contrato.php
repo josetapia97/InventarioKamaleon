@@ -55,11 +55,6 @@ class Contrato
     }
 
 
-    /*quitar vigencia y ahi marcar fecha de termino? 
-    o al añadir fecha de termino cambiar la vigencia?
-    lo otro; los date= d?
-    */
-
 
     //mostrar los datos de un registro a modificar
     public function mostrar($idcontrato)
