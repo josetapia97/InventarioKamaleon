@@ -61,7 +61,6 @@ switch ($_GET["op"]) {
         //Case desactivar
     case 'finalizarcontrato':
         $res = $contrato->finalizarcontrato($idcontrato);
-        sleep(1);
         echo $res ? "Contrato finalizado, revisar fecha de termino" : "Contrato no se pudo finalizar";
         break;
 

@@ -55,11 +55,6 @@ class Contrato
     }
 
 
-    /*quitar vigencia y ahi marcar fecha de termino? 
-    o al añadir fecha de termino cambiar la vigencia?
-    lo otro; los date= d?
-    */
-
 
     //mostrar los datos de un registro a modificar
     public function mostrar($idcontrato)
@@ -137,7 +132,7 @@ class Contrato
 
         try {
 
-            $sql = "UPDATE contrato SET vigente=1, fechatermino= SYSDATE() WHERE idcontrato = ?";
+            $sql = "UPDATE contrato SET vigente=1, fechatermino= NULL WHERE idcontrato = ?";
             $stmt = getConnection()->prepare($sql);
             $stmt->bind_param('i', $idcontrato);
             $stmt->execute();
