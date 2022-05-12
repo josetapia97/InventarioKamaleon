@@ -24,7 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fechatermino = $_POST['fechatermino'];
     $contratoOBJ->editar($form_id,$idarticulo, $idusuariofinal, $idempresa,$fechainicio,$fechatermino, $valorarticulo);
   }
-  header("Location: contratos.php");
+  //header("Location: contratos.php");
+  var_dump($_POST);
   exit();
 }
 
@@ -234,7 +235,7 @@ require_once 'header.php'
           <div class="form-group ">
             <label>Articulo:</label>
             <!---Solo articulos disponibles y no arrendados--->
-            <select disabled id="form_idarticulo" name="idarticulo" class="form-control">
+            <select id="form_idarticulo" name="idarticulo" class="form-control">
                   <?php foreach ($articulos as $articulo) : ?>
                     <option value="<?php echo $articulo['idarticulo'] ?>"> <?php echo $articulo['nombre']?> </option>
                    <?php endforeach; ?>
