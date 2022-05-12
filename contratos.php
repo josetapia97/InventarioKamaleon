@@ -235,11 +235,12 @@ require_once 'header.php'
           <div class="form-group ">
             <label>Articulo:</label>
             <!---Solo articulos disponibles y no arrendados--->
-            <select id="form_idarticulo" name="idarticulo" class="form-control">
+            <select disabled id="form_idarticuloh" name="idarticuloh" class="form-control">
                   <?php foreach ($articulos as $articulo) : ?>
                     <option value="<?php echo $articulo['idarticulo'] ?>"> <?php echo $articulo['nombre']?> </option>
                    <?php endforeach; ?>
             </select>
+            <input type="hidden" id="form_idarticulo" name="idarticulo" value="<?php $articulo['idarticulo'] ?>">
           </div>
           <div class="form-group ">
             <label>Trabajador:</label>
