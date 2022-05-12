@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fechatermino = $_POST['fechatermino'];
     $contratoOBJ->editar($form_id,$idarticulo, $idusuariofinal, $idempresa,$fechainicio,$fechatermino, $valorarticulo);
   }
-  //header("Location: contratos.php");
+  header("Location: contratos.php");
   var_dump($_POST);
   exit();
 }
