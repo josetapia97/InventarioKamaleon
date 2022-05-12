@@ -137,7 +137,7 @@ class Contrato
 
         try {
 
-            $sql = "UPDATE contrato SET vigente=1, fechatermino= SYSDATE() WHERE idcontrato = ?";
+            $sql = "UPDATE contrato SET vigente=1, fechatermino= NULL WHERE idcontrato = ?";
             $stmt = getConnection()->prepare($sql);
             $stmt->bind_param('i', $idcontrato);
             $stmt->execute();
